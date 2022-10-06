@@ -4,7 +4,6 @@ import Header from "../Header/Header";
 const Products = () => {
   return (
     <div>
-      <Header></Header>
       <h1>Hello, I'm Products, Whats about yours</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolorum

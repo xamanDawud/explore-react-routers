@@ -4,14 +4,24 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Products from "./components/Products/Products";
+import Main from "./layout/Main";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   const router = createBrowserRouter([
-    { path: "/", element: <div>This is Defaultt Page</div> },
-    { path: "/home", element: <Home></Home> },
+    {
+      path: "/",
+      element: <Main></Main>,
+      children: [
+        { path: "/", element: <Home></Home> },
+        { path: "/home", element: <Home></Home> },
+        { path: "/products", element: <Products></Products> },
+        { path: "/about", element: <About /> },
+        { path: "/contact", element: <Contact /> },
+      ],
+    },
+
     { path: "/blog", element: <div>This is Blog Page</div> },
-    { path: "/about", element: <About /> },
-    { path: "/products", element: <Products></Products> },
   ]);
   return (
     <div className="App">
