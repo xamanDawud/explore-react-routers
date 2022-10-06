@@ -15,9 +15,19 @@ function App() {
       children: [
         { path: "/", element: <Home></Home> },
         { path: "/home", element: <Home></Home> },
-        { path: "/products", element: <Products></Products> },
+        {
+          path: "/products",
+          element: <Products></Products>,
+          loader: () => {
+            return fetch("https://jsonplaceholder.typicode.com/users");
+          },
+        },
         { path: "/about", element: <About /> },
         { path: "/contact", element: <Contact /> },
+        {
+          path: "*",
+          element: <div>This route is not found in this website</div>,
+        },
       ],
     },
 
