@@ -15,7 +15,7 @@ const User = ({ user }) => {
       <p>Email :{email}</p>
       <p>Phone:{phone}</p>
       <p>
-        Id:<Link to={`product/${id}`}>Number</Link>
+        Id:<Link to={`/friendDetails/${id}`}>Number</Link>
       </p>
     </div>
   );
